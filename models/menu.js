@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const menuSchema = new mongoose.Schema({
-    nombre: {type: String, ref:'Producto'},
-    precio: Number,
-    descripcion: String,
-    producto: {type: mongoose.Schema.ObjectId, ref:'Producto'}
+    idProducto: {type: mongoose.Schema.ObjectId, ref:'Producto'},
+    nombreProducto: {type: String, ref:'Producto'},
+    precio: {type: Number, ref:'Producto'},
+    descripcion: String
 });
 
 module.exports = mongoose.model('Menu', menuSchema);

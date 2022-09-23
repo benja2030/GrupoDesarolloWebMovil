@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const perfilSchema = new mongoose.Schema({
     nombre: String,
-    usuarios: [{type: mongoose.Schema.ObjectId, ref:'Usuario'}]
+    idUsuarios: [{type: mongoose.Schema.ObjectId, ref:'Usuario'}]
     
     /*usuarios: [{
         _id: {type: mongoose.Schema.ObjectId, ref:'Usuario'},
